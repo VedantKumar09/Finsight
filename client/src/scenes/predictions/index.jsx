@@ -19,9 +19,11 @@ const signalBg = {
 
 const Predictions = () => {
   const [ticker, setTicker] = useState("AAPL");
-  const [activeTicker, setActiveTicker] = useState("AAPL");
+  const [activeTicker, setActiveTicker] = useState("");
 
-  const { data: prediction, isLoading, error } = useGetStockPredictionQuery(activeTicker);
+  const { data: prediction, isLoading, error, isFetching } = useGetStockPredictionQuery(activeTicker, {
+    skip: !activeTicker,
+  });
 
   const handleSearch = () => {
     if (ticker.trim()) setActiveTicker(ticker.trim().toUpperCase());
@@ -66,7 +68,7 @@ const Predictions = () => {
         </Box>
       </DashboardBox>
 
-      {isLoading ? (
+      {isFetching ? (
         <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
           <DashboardBox p="1.25rem"><LoadingSkeleton count={6} height="30px" /></DashboardBox>
           <DashboardBox p="1.25rem"><LoadingSkeleton count={6} height="30px" /></DashboardBox>
