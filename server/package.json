@@ -1,17 +1,15 @@
 {
-  "name": "server",
+  "name": "finsight-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Finsight API — Personal Finance & Stock Market Platform",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "seed": "node scripts/seedData.js",
-    "view-data": "node scripts/viewData.js"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["finance", "stocks", "machine-learning", "dashboard"],
+  "author": "Vedant Kumar",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,9 +20,7 @@
     "helmet": "^6.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.0",
-    "mongoose-currency": "^0.2.0",
-    "morgan": "^1.10.0",
-    "python-shell": "^5.0.0"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"

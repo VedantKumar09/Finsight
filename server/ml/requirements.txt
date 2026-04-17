@@ -1,15 +1,6 @@
-# Core requirements (REQUIRED)
-pandas>=1.5.0
-numpy>=1.23.0
-scikit-learn>=1.2.0
-joblib>=1.2.0
-xgboost>=2.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-
-# Optional: For LSTM model (TensorFlow may not work on Python 3.14)
-# Uncomment if you want LSTM model:
-# tensorflow>=2.13.0
-# keras>=2.13.1
-
-
+scikit-learn
+numpy
+pandas
+joblib
+xgboost
+yfinance

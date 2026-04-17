@@ -27,6 +27,18 @@ const UserSchema = new Schema(
       required: true,
       min: 5,
     },
+    virtualBalance: {
+      type: Number,
+      default: 100000, // $100,000 starting virtual balance
+    },
+    currency: {
+      type: String,
+      default: "USD",
+    },
+    avatar: {
+      type: String,
+      default: "",
+    },
   },
   { timestamps: true }
 );
@@ -34,4 +46,3 @@ const UserSchema = new Schema(
 const User = mongoose.model("User", UserSchema);
 
 export default User;
-

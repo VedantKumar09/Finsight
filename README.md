@@ -1,6 +1,27 @@
-# Finance Dashboard App
+# Finsight — Smart Finance Dashboard
 
-Build A MERN Finance Dashboard App with ML-based Profit Prediction
+An AI-powered personal finance management and stock market simulation platform built with the MERN stack and Machine Learning.
+
+## ✨ Features
+
+- 🔐 **User Authentication** — Secure JWT-based login/register
+- 💰 **Personal Finance Management** — Track income, expenses, and multiple accounts
+- 📊 **Interactive Dashboard** — Beautiful charts for spending trends and category breakdowns
+- 📈 **Live Stock Market** — Real-time stock data powered by Yahoo Finance
+- 🎯 **Simulated Trading** — Buy/sell stocks with $100,000 virtual balance
+- 💼 **Portfolio Tracking** — Track holdings, realized P&L, and trade history
+- 🤖 **AI Stock Predictions** — ML-powered price forecasting using Random Forest & Gradient Boosting
+- 📉 **Feature Importance** — Explainable AI showing what drives each prediction
+- 🎨 **Premium Dark UI** — Glassmorphism design with micro-animations
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | React, JavaScript, Material-UI, Redux Toolkit (RTK Query), Recharts, Framer Motion |
+| **Backend** | Node.js, Express, MongoDB, Mongoose |
+| **ML/AI** | Python, scikit-learn, XGBoost, yfinance |
+| **Auth** | JWT, bcrypt |
 
 ## 🚀 Quick Start
 
@@ -9,133 +30,75 @@ Build A MERN Finance Dashboard App with ML-based Profit Prediction
 - Python 3.8+
 - MongoDB (local or Atlas)
 
-### Installation & Run
+### Installation
 
-**1. Backend Setup:**
+**1. Backend:**
 ```bash
 cd server
 npm install
 cd ml
 pip install -r requirements.txt
-python train_model.py
 cd ..
-# Create .env file (see SETUP.md)
+# Create .env file with:
+# MONGO_URL=mongodb+srv://...
+# JWT_SECRET=your-secret-key
 npm run dev
 ```
 
-**2. Frontend Setup (new terminal):**
+**2. Frontend (new terminal):**
 ```bash
 cd client
 npm install
-# Create .env file with VITE_BASE_URL=http://localhost:9000
+# Create .env file with:
+# VITE_BASE_URL=http://localhost:9000/
 npm run dev
 ```
 
-**3. Access Application:**
-Open http://localhost:5173 in your browser
-
-## ✨ Features
-
-- ✅ **User Authentication** (JWT-based login/register)
-- ✅ **Multiple ML Models** (Linear Regression, XGBoost, Random Forest)
-- ✅ **ML-based Profit Prediction** with 97.8% accuracy
-- ✅ **Prediction History** tracking per user
-- ✅ **Financial Dashboard** with interactive charts and KPIs
-- ✅ **Protected Routes** for authenticated users
-
-## 📚 Documentation
-
-- **[SETUP.md](./SETUP.md)** - Quick start installation guide
-- **[docs/thesis.md](./docs/thesis.md)** - Complete academic thesis
-- **[docs/database-design.md](./docs/database-design.md)** - Database architecture
-- **[docs/er-diagram.md](./docs/er-diagram.md)** - Entity relationship diagrams
-- **[docs/ml-guide.md](./docs/ml-guide.md)** - ML model training guide
-- **[docs/implementation.md](./docs/implementation.md)** - Implementation details
-- **[docs/project-review.md](./docs/project-review.md)** - Project review and status
-
-
-## 🛠️ Tech Stack
-
-- **Frontend:** React, TypeScript, Material-UI, Redux Toolkit, Recharts
-- **Backend:** Node.js, Express, MongoDB, Mongoose
-- **ML:** Python, scikit-learn (Linear Regression, Random Forest, XGBoost)
-- **Auth:** JWT, bcrypt
-
-## 📊 Project Status
-
-✅ **Fully Functional** - All features working and tested
-
-- Multiple ML models trained and compared
-- Linear Regression model achieves 97.8% accuracy (R² = 0.9784)
-- Predictions working with model selection support
-- Dashboard displaying financial data
-- User authentication and history tracking functional
-
-## 🎯 Quick Commands
-
-```bash
-# View database contents
-cd server && npm run view-data
-
-# Seed database
-cd server && npm run seed
-
-# Start backend
-cd server && npm run dev
-
-# Start frontend
-cd client && npm run dev
-
-# Train ML models
-cd server/ml && python train_xgboost.py
-cd server/ml && python train_linear.py
-cd server/ml && python compare_models.py
-```
-
-## 📖 Original Tutorial
-
-Video: https://www.youtube.com/watch?v=uoJ0Tv-BFcQ
-
-For all related questions and discussions about this project, check out the discord: https://discord.gg/2FfPeEk2mX
+**3. Open** http://localhost:5173
 
 ## 📁 Project Structure
 
 ```
 finance-app/
-├── README.md                    # This file
-├── SETUP.md                     # Installation guide
-├── docs/                        # Documentation
-│   ├── thesis.md               # Academic thesis
-│   ├── database-design.md      # Database architecture
-│   ├── er-diagram.md           # ER diagrams
-│   ├── ml-guide.md             # ML training guide
-│   ├── implementation.md       # Implementation details
-│   └── project-review.md       # Project status
-├── client/                      # React frontend
-│   ├── src/
-│   │   ├── scenes/             # Pages (dashboard, predictions, etc.)
-│   │   ├── components/         # Reusable components
-│   │   └── state/              # Redux state management
-│   └── package.json
-└── server/                      # Node.js backend
-    ├── models/                 # MongoDB models
-    ├── routes/                 # API routes
-    ├── middleware/             # Auth middleware
-    ├── ml/                     # Machine Learning
-    │   ├── train_model.py      # Random Forest
-    │   ├── train_xgboost.py    # XGBoost
-    │   ├── train_linear.py     # Linear Regression
-    │   ├── compare_models.py   # Model comparison
-    │   └── *.pkl               # Trained models
-    └── package.json
+├── client/                    # React frontend
+│   └── src/
+│       ├── scenes/           # Pages
+│       │   ├── dashboard/    # Main dashboard
+│       │   ├── markets/      # Stock market & trading
+│       │   ├── portfolio/    # Portfolio & trade history
+│       │   ├── transactions/ # Income/expense management
+│       │   ├── predictions/  # AI stock predictions
+│       │   ├── login/        # Login page
+│       │   ├── register/     # Register page
+│       │   └── navbar/       # Navigation bar
+│       ├── components/       # Reusable UI components
+│       └── state/            # Redux + RTK Query
+└── server/                   # Node.js backend
+    ├── models/               # MongoDB schemas
+    ├── routes/               # REST API endpoints
+    ├── middleware/            # JWT auth
+    └── ml/                   # Python ML scripts
+        ├── stock_data.py     # Yahoo Finance data fetcher
+        └── stock_predict.py  # ML prediction engine
 ```
+
+## 🤖 Machine Learning
+
+The platform uses **dual ML models** trained on-demand for each stock:
+
+| Model | Algorithm | Purpose |
+|---|---|---|
+| Random Forest | Ensemble (100 trees) | Price prediction |
+| Gradient Boosting | Sequential boosting | Price prediction |
+
+**Features used:** Close price, Returns, MA5/MA20/MA50, RSI, MACD, Volatility, Volume
+
+The system automatically selects the better-performing model based on R² score.
 
 ## 🎓 Academic Contribution
 
-This project demonstrates:
-- **Full-stack development** with MERN stack
-- **Machine learning integration** with comparative analysis
-- **Systematic model evaluation** (R², MAE metrics)
-- **JWT authentication** and secure data handling
-- **Research methodology** in ML model selection
-
+- Full-stack MERN development with real-world financial data
+- Comparative ML model analysis (Random Forest vs Gradient Boosting)
+- Feature importance visualization (Explainable AI)
+- Technical indicators (RSI, MACD, Moving Averages) as ML features
+- Simulated trading system with P&L tracking

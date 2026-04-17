@@ -1,50 +1,58 @@
 export const tokens = {
   grey: {
-    100: "#f0f0f3",
-    200: "#e1e2e7",
-    300: "#d1d3da",
-    400: "#c2c5ce",
-    500: "#b3b6c2",
-    600: "#8f929b",
-    700: "#6b6d74",
-    800: "#48494e",
-    900: "#242427",
+    100: "#f1f5f9",
+    200: "#e2e8f0",
+    300: "#cbd5e1",
+    400: "#94a3b8",
+    500: "#64748b",
+    600: "#475569",
+    700: "#334155",
+    800: "#1e293b",
+    900: "#0f172a",
   },
   primary: {
-    // light green
-    100: "#d0fcf4",
-    200: "#a0f9e9",
-    300: "#71f5de",
-    400: "#41f2d3",
-    500: "#12efc8",
-    600: "#0ebfa0",
-    700: "#0b8f78",
-    800: "#076050",
-    900: "#043028",
+    // Indigo — modern, premium
+    100: "#e0e7ff",
+    200: "#c7d2fe",
+    300: "#a5b4fc",
+    400: "#818cf8",
+    500: "#6366f1",
+    600: "#4f46e5",
+    700: "#4338ca",
+    800: "#3730a3",
+    900: "#312e81",
   },
   secondary: {
-    // yellow
-    100: "#fcf0dd",
-    200: "#fae1bb",
-    300: "#f7d299",
-    400: "#f5c377",
-    500: "#f2b455",
-    600: "#c29044",
-    700: "#916c33",
-    800: "#614822",
-    900: "#302411",
+    // Emerald — gains / positive
+    100: "#d1fae5",
+    200: "#a7f3d0",
+    300: "#6ee7b7",
+    400: "#34d399",
+    500: "#10b981",
+    600: "#059669",
+    700: "#047857",
+    800: "#065f46",
+    900: "#064e3b",
   },
   tertiary: {
-    // purple
-    500: "#8884d8",
+    // Rose — losses / alerts
+    500: "#f43f5e",
+  },
+  accent: {
+    amber: "#f59e0b",
+    sky: "#38bdf8",
+    violet: "#8b5cf6",
+    cyan: "#06b6d4",
   },
   background: {
-    light: "#2d2d34",
-    main: "#1f2026",
+    darkest: "#0a0b0f",
+    dark: "#12131a",
+    card: "#1a1b25",
+    elevated: "#242536",
   },
 };
 
-// mui theme settings
+// MUI theme settings
 export const themeSettings = {
   palette: {
     primary: {
@@ -64,54 +72,93 @@ export const themeSettings = {
       main: tokens.grey[500],
     },
     background: {
-      default: tokens.background.main,
-      light: tokens.background.light,
+      default: tokens.background.darkest,
+      paper: tokens.background.card,
+      light: tokens.background.elevated,
     },
     text: {
       primary: tokens.grey[100],
-      secondary: tokens.grey[300],
+      secondary: tokens.grey[400],
+    },
+    success: {
+      main: tokens.secondary[500],
+    },
+    error: {
+      main: "#f43f5e",
+    },
+    warning: {
+      main: "#f59e0b",
+    },
+    info: {
+      main: "#38bdf8",
     },
   },
   typography: {
-    fontFamily: ["Inter", "sans-serif"].join(","),
-    fontSize: 12,
+    fontFamily: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"].join(","),
+    fontSize: 13,
     h1: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 32,
+      fontWeight: 800,
+      letterSpacing: "-0.02em",
     },
     h2: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 24,
+      fontWeight: 700,
+      letterSpacing: "-0.01em",
     },
     h3: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 20,
-      fontWeight: 800,
-      color: tokens.grey[200],
+      fontWeight: 700,
+      color: tokens.grey[100],
     },
     h4: {
       fontFamily: ["Inter", "sans-serif"].join(","),
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: 600,
-      color: tokens.grey[300],
+      color: tokens.grey[200],
     },
     h5: {
       fontFamily: ["Inter", "sans-serif"].join(","),
-      fontSize: 12,
-      fontWeight: 400,
-      color: tokens.grey[500],
+      fontSize: 13,
+      fontWeight: 500,
+      color: tokens.grey[400],
     },
     h6: {
       fontFamily: ["Inter", "sans-serif"].join(","),
-      fontSize: 10,
-      color: tokens.grey[700],
+      fontSize: 11,
+      fontWeight: 400,
+      color: tokens.grey[500],
     },
   },
+  shape: {
+    borderRadius: 12,
+  },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          fontWeight: 600,
+          borderRadius: 10,
+          padding: "8px 20px",
+        },
+        contained: {
+          background: `linear-gradient(135deg, ${tokens.primary[500]}, ${tokens.primary[700]})`,
+          boxShadow: `0 4px 14px rgba(99, 102, 241, 0.3)`,
+          "&:hover": {
+            background: `linear-gradient(135deg, ${tokens.primary[400]}, ${tokens.primary[600]})`,
+            boxShadow: `0 6px 20px rgba(99, 102, 241, 0.4)`,
+          },
+        },
+      },
+    },
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: tokens.grey[300],
+          color: tokens.grey[400],
         },
       },
     },
@@ -119,11 +166,16 @@ export const themeSettings = {
       styleOverrides: {
         root: {
           color: tokens.grey[100],
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: tokens.grey[800],
+          borderRadius: 10,
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "rgba(255, 255, 255, 0.08)",
           },
-          '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: tokens.grey[600],
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "rgba(255, 255, 255, 0.15)",
+          },
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: tokens.primary[500],
+            borderWidth: 1,
           },
         },
         input: {
@@ -138,10 +190,40 @@ export const themeSettings = {
         },
       },
     },
-    MuiFormHelperText: {
+    MuiPaper: {
       styleOverrides: {
         root: {
-          color: tokens.grey[300],
+          backgroundImage: "none",
+          backgroundColor: tokens.background.card,
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: tokens.background.card,
+          backgroundImage: "none",
+          border: "1px solid rgba(255, 255, 255, 0.06)",
+          borderRadius: 16,
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        icon: {
+          color: tokens.grey[400],
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            backgroundColor: tokens.background.elevated,
+          },
+          "&.Mui-selected": {
+            backgroundColor: "rgba(99, 102, 241, 0.1)",
+          },
         },
       },
     },
