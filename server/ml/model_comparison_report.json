@@ -1,0 +1,51 @@
+{
+  "generated_at": "2025-12-26T16:37:29.300217",
+  "models_trained": 3,
+  "best_accuracy": {
+    "model": "Linear Regression",
+    "r2_score": 0.978368338181496
+  },
+  "best_error": {
+    "model": "Linear Regression",
+    "mae": 4073.3363894816407
+  },
+  "all_models": {
+    "Random Forest": {
+      "model_name": "Random Forest",
+      "mae": 6200.35,
+      "r2_score": 0.9532,
+      "training_time": 2.34,
+      "file": "profit_model.pkl",
+      "status": "trained"
+    },
+    "XGBoost": {
+      "model_name": "XGBoost",
+      "mae": 5978.505902053564,
+      "rmse": 7463.046765631965,
+      "r2_score": 0.9541725895416105,
+      "training_time": 1.40859,
+      "timestamp": "2025-12-26T16:19:03.465749",
+      "n_estimators": 200,
+      "max_depth": 6,
+      "file": "xgboost_model.pkl",
+      "status": "trained"
+    },
+    "Linear Regression": {
+      "model_name": "Linear Regression",
+      "mae": 4073.3363894816407,
+      "rmse": 5127.414729399444,
+      "r2_score": 0.978368338181496,
+      "training_time": 0.004904,
+      "timestamp": "2025-12-26T16:19:20.244481",
+      "coefficients": {
+        "revenue": 0.9949715903850753,
+        "expenses": -1.0000189532643509,
+        "marketing_spend": -0.99100950394029,
+        "operational_costs": -1.0225931206559211
+      },
+      "intercept": 558.55673903979,
+      "file": "linear_model.pkl",
+      "status": "trained"
+    }
+  }
+}

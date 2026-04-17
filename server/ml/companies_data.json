@@ -1,0 +1,62 @@
+[
+  {
+    "companyName": "TechNova Solutions Pvt. Ltd.",
+    "email": "admin@technova.in",
+    "industry": "Software Development",
+    "foundedDate": "2018-03-15",
+    "employees": 45,
+    "location": "Bangalore, Karnataka",
+    "description": "Leading software development company specializing in enterprise solutions and cloud services",
+    "contactPerson": "Rajesh Kumar",
+    "phone": "+91-80-4567-8900",
+    "website": "www.technova.in"
+  },
+  {
+    "companyName": "GreenLeaf Organic Foods",
+    "email": "admin@greenleaf.in",
+    "industry": "Food & Beverage",
+    "foundedDate": "2015-06-20",
+    "employees": 120,
+    "location": "Pune, Maharashtra",
+    "description": "Organic food manufacturer and distributor serving premium markets across India",
+    "contactPerson": "Priya Sharma",
+    "phone": "+91-20-6789-1234",
+    "website": "www.greenleaf.in"
+  },
+  {
+    "companyName": "UrbanFlow Logistics",
+    "email": "admin@urbanflow.in",
+    "industry": "Transportation & Logistics",
+    "foundedDate": "2019-01-10",
+    "employees": 200,
+    "location": "Mumbai, Maharashtra",
+    "description": "Modern logistics solution provider with pan-India delivery network",
+    "contactPerson": "Arjun Mehta",
+    "phone": "+91-22-8901-2345",
+    "website": "www.urbanflow.in"
+  },
+  {
+    "companyName": "EduMentor Academy",
+    "email": "admin@edumentor.in",
+    "industry": "Education Technology",
+    "foundedDate": "2020-08-01",
+    "employees": 30,
+    "location": "Hyderabad, Telangana",
+    "description": "Online learning platform offering skill development courses and certifications",
+    "contactPerson": "Kavita Reddy",
+    "phone": "+91-40-3456-7890",
+    "website": "www.edumentor.in"
+  },
+  {
+    "companyName": "HealthFirst Clinics",
+    "email": "admin@healthfirst.in",
+    "industry": "Healthcare",
+    "foundedDate": "2012-11-05",
+    "employees": 85,
+    "location": "Delhi, NCR",
+    "description": "Chain of multi-specialty clinics providing quality healthcare services",
+    "contactPerson": "Dr. Amit Singh",
+    "phone": "+91-11-2345-6789",
+    "website": "www.healthfirst.in"
+  }
+]

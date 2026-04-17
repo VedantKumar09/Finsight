@@ -1,0 +1,43 @@
+{
+  "company": "UrbanFlow Logistics",
+  "forecasts": [
+    {
+      "year": 2025,
+      "month": 12,
+      "predicted_revenue": 76029066.53747244,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "predicted_revenue": 79366276.32246645,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "predicted_revenue": 78911190.73240393,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "predicted_revenue": 78456105.14234143,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "predicted_revenue": 79945335.03909852,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "predicted_revenue": 79490249.449036,
+      "confidence": 0.85
+    }
+  ],
+  "model_r2": 0.9366315416757589,
+  "generated_at": "2025-12-26T17:25:14.167876"
+}

@@ -1,0 +1,43 @@
+{
+  "company": "GreenLeaf Organic Foods",
+  "forecasts": [
+    {
+      "year": 2025,
+      "month": 12,
+      "predicted_revenue": 24844501.266478114,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "predicted_revenue": 26760381.226409316,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "predicted_revenue": 26679167.132673033,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "predicted_revenue": 26597953.03893675,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "predicted_revenue": 26376269.166056514,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "predicted_revenue": 26295055.07232023,
+      "confidence": 0.85
+    }
+  ],
+  "model_r2": 0.9330285917743466,
+  "generated_at": "2025-12-26T17:25:08.630504"
+}

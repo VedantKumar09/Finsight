@@ -1,0 +1,10 @@
+{
+  "model_name": "XGBoost",
+  "mae": 5978.505902053564,
+  "rmse": 7463.046765631965,
+  "r2_score": 0.9541725895416105,
+  "training_time": 1.40859,
+  "timestamp": "2025-12-26T16:19:03.465749",
+  "n_estimators": 200,
+  "max_depth": 6
+}

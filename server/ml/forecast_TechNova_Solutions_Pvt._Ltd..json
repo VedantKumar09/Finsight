@@ -1,0 +1,43 @@
+{
+  "company": "TechNova Solutions Pvt. Ltd.",
+  "forecasts": [
+    {
+      "year": 2025,
+      "month": 12,
+      "predicted_revenue": 6933830.033935243,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "predicted_revenue": 7113799.505426455,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "predicted_revenue": 7168033.961599509,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "predicted_revenue": 7222268.417772563,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "predicted_revenue": 7197485.138774603,
+      "confidence": 0.85
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "predicted_revenue": 7251719.594947657,
+      "confidence": 0.85
+    }
+  ],
+  "model_r2": 0.9164198554910814,
+  "generated_at": "2025-12-26T17:24:22.762473"
+}
